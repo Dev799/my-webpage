@@ -1,0 +1,131 @@
+/*
+
+*/
+@font-face {
+    font-family:"pricedown";
+    src: url(../fonts/pricedown.ttf);
+}
+
+
+* { margin: 0;    padding: 0;    box-sizing: border-box;}
+
+body{
+
+    /*font-family: 'Reenie Beanie', cursive; */
+    font-family: 'Lato', sans-serif;
+   /* font-family: 'Open Sans Condensed', sans-serif; */
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.7;
+    color:black;
+    padding: 20px;
+}
+
+
+.header {
+    height:95vh;
+    
+    background-image: linear-gradient(to left bottom, 
+        rgba(227, 141, 230, 0.81), 
+        rgba(255, 255, 255, 0.8)), url(../img/gtavc12.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: scroll;
+    
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0% 100%);
+    
+    position: relative;
+  
+}
+
+.logo-box{
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    
+}
+
+.logo {
+        height: 23vh;
+        animation-name: gtalogo;
+        animation-duration: 1s;
+        animation-delay: 2ms;
+        animation-timing-function: ease-out;
+}
+
+.logo-box2 {
+    display: block;
+    position: absolute;
+    bottom: -1.2%;
+    left: 10%;
+}
+
+.lady {
+    display: block;
+    height: 40vh;
+    animation-name: ladylogo;
+    animation-duration: 1s;
+    animation-delay: 2ms;
+    animation-timing-function: ease-out;
+}
+
+
+.text-box {
+    position: absolute;
+    top:  40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.heading-primary {
+    color: #ee3190;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #58062f;
+}
+
+.heading-span1 {
+    display: block;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 500;
+    letter-spacing: 15px;
+}
+
+.heading-span2 {
+    display: block;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 300;
+    letter-spacing: 11.5px;
+}
+
+
+
+@keyframes  gtalogo {
+    0%{ opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    90% { transform: translateY(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes  ladylogo {
+    0%{ opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    90% { transform: translateX(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
